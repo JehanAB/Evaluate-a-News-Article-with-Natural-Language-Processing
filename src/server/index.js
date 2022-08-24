@@ -17,7 +17,9 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/', function (req, res) {
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile(path.resolve("dist/index.html"));
+
+    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 const baseAPI = `https://api.meaningcloud.com/sentiment-2.1&key=${process.env.API_KEY}&lang=en&url=`
